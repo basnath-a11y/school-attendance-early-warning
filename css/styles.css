@@ -12,3 +12,15 @@ button:hover { filter: brightness(1.15); }
 .topbar { display: flex; justify-content: space-between; align-items: center; background: var(--brand); color: #fff; padding: .75rem 1rem; }
 .topbar button { width: auto; margin: 0; padding: .5rem 1rem; background: #fff; color: var(--brand); }
 main.page { max-width: 900px; margin: 1.5rem auto; padding: 0 1rem; }
+h2 { font-size: 1.2rem; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; margin: 1rem 0; }
+th, td { padding: .75rem; border-bottom: 1px solid #ddd; text-align: left; }
+th { background: #e8efe9; }
+.seg { display: flex; gap: .5rem; flex-wrap: wrap; }
+.seg button { width: auto; margin: 0; padding: .6rem 1rem; font-size: 1rem; background: #fff; color: #333; border: 2px solid #777; }
+.seg button.present.active { background: #0b5d3b; color: #fff; border-color: #0b5d3b; }
+.seg button.absent.active { background: #b00020; color: #fff; border-color: #b00020; }
+.seg button.late.active { background: #b26a00; color: #fff; border-color: #b26a00; }
+.banner.success { background: #e6f4ea; color: #0b5d3b; border-color: #0b5d3b; }
+#alert-list { padding-left: 1.2rem; }
+#alert-list li { margin-bottom: .75rem; }
