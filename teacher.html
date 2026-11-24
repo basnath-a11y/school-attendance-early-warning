@@ -12,20 +12,28 @@
     <button id="logout">Log out</button>
   </header>
   <main class="page">
-    <h1>Teacher Dashboard</h1>
-    <p>Attendance roster coming next.</p>
+    <h1 id="class-title">Daily Attendance</h1>
+    <p id="class-info" class="subtitle"></p>
+    <div id="message" class="banner" hidden></div>
+    <div id="success" class="banner success" hidden></div>
+
+    <table id="roster" hidden>
+      <thead>
+        <tr><th>#</th><th>Student</th><th>Status</th></tr>
+      </thead>
+      <tbody id="roster-body"></tbody>
+    </table>
+    <button id="submit-btn" hidden>Submit Attendance</button>
+
+    <section id="alert-log" hidden>
+      <h2>Alerts triggered</h2>
+      <ul id="alert-list"></ul>
+    </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
   <script src="js/supabaseClient.js"></script>
   <script src="js/auth.js"></script>
-  <script>
-    (async () => {
-      const profile = await requireRole("teacher");
-      if (!profile) return;
-      document.getElementById("who").textContent = profile.full_name + " (Teacher)";
-      document.getElementById("logout").addEventListener("click", logout);
-    })();
-  </script>
+  <script src="js/teacher.js"></script>
 </body>
 </html>
