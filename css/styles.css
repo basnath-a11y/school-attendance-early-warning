@@ -24,3 +24,12 @@ th { background: #e8efe9; }
 .banner.success { background: #e6f4ea; color: #0b5d3b; border-color: #0b5d3b; }
 #alert-list { padding-left: 1.2rem; }
 #alert-list li { margin-bottom: .75rem; }
+.toolbar { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin: 1rem 0; }
+.toolbar label { margin: 0; }
+.toolbar select { padding: .6rem; font-size: 1rem; border: 2px solid #777; border-radius: 8px; }
+.toolbar .check { display: flex; align-items: center; gap: .5rem; font-weight: normal; }
+.toolbar .check input { width: auto; }
+select.status { padding: .5rem; font-size: 1rem; font-weight: bold; border: 2px solid #777; border-radius: 8px; background: #fff; }
+select.status-open { border-color: #b00020; color: #b00020; }
+select.status-in-progress { border-color: #b26a00; color: #b26a00; }
+select.status-resolved { border-color: #0b5d3b; color: #0b5d3b; }

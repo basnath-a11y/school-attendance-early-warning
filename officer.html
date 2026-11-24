@@ -12,20 +12,39 @@
     <button id="logout">Log out</button>
   </header>
   <main class="page">
-    <h1>Community Officer Dashboard</h1>
-    <p>Flagged students coming soon.</p>
+    <h1>Flagged Students</h1>
+    <p id="sector-info" class="subtitle"></p>
+    <div id="message" class="banner" hidden></div>
+    <div id="success" class="banner success" hidden></div>
+
+    <div class="toolbar">
+      <label for="sort">Sort by</label>
+      <select id="sort">
+        <option value="date">Date flagged (newest first)</option>
+        <option value="school">School name</option>
+      </select>
+      <label class="check"><input type="checkbox" id="show-resolved"> Show resolved cases</label>
+    </div>
+
+    <table id="cases" hidden>
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>School</th>
+          <th>Guardian phone</th>
+          <th>Days absent</th>
+          <th>Flagged on</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="cases-body"></tbody>
+    </table>
+    <p id="empty" hidden>No flagged students right now.</p>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
   <script src="js/supabaseClient.js"></script>
   <script src="js/auth.js"></script>
-  <script>
-    (async () => {
-      const profile = await requireRole("officer");
-      if (!profile) return;
-      document.getElementById("who").textContent = profile.full_name + " (Community Officer)";
-      document.getElementById("logout").addEventListener("click", logout);
-    })();
-  </script>
+  <script src="js/officer.js"></script>
 </body>
 </html>
