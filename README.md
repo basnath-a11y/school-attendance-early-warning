@@ -4,7 +4,7 @@ A web platform that helps rural primary schools in Rwanda spot early signs of st
 
 - **Live app:** https://school-attendance-early-warning.netlify.app
 - **SRS document:** https://docs.google.com/document/d/1YPQ9qsXDgX6QV8S_uWSalYLP0MVyChngJCMbDK3lnb0
-- **Demo video:** ADD-VIDEO-LINK-HERE
+- **Demo video:** https://drive.google.com/file/d/1dCjVYwAKmQ4Aq0974gJn1m5oj2xh-qsj/view?usp=sharing
 
 Course project: Introduction to Software Engineering, African Leadership University (ALU). Author: Asnath Irebe Butera.
 
